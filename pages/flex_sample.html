@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Demo Flexbox 3</title>
+        <style>
+            * {
+                box-sizing: border-box; 
+            }
+            body{
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+                margin: 0;
+                padding: 2em;
+            }
+
+            .headerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            header,footer{
+                background: yellowgreen;
+                height: 20vh;
+            }
+
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem{
+                text-align: left;
+            }
+
+            article{
+                padding: 10px;
+                margin: 10px;
+            }
+
+            .sideBarLeftItem{ background:beige;}
+            .sideBarRightItem{ background:#D7E8D4;}
+
+            .sideBarItem{flex: 1 0 0; border: 0px solid green;}
+            .mainContentItem{flex: 3 0px;}
+            .sideBarLeftItem{order: 1;}
+            .mainContentItem{order:2;}
+            .sideBarRightItem{order:3;}
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First article</h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis amet adipisci possimus sit rem voluptatem eos accusamus, maxime repellendus corporis suscipit dolorem, a iure vel fuga esse? Quia quibusdam dolores, omnis corporis accusamus soluta.</p>
+                </article>
+                <article>
+                    <h2>Second article</h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis amet adipisci possimus sit rem voluptatem eos accusamus, maxime repellendus corporis suscipit dolorem, a iure vel fuga esse? Quia quibusdam dolores, omnis corporis accusamus soluta.</p>
+                </article>
+                <article>
+                    <h2>Third article</h2>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis amet adipisci possimus sit rem voluptatem eos accusamus, maxime repellendus corporis suscipit dolorem, a iure vel fuga esse? Quia quibusdam dolores, omnis corporis accusamus soluta.</p>
+                </article>
+            </section>
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left side Bar</p></div></sideBar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right side Bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer"><div class="center"><p>Footer</p></div></footer>
+    </body>
+</html>
